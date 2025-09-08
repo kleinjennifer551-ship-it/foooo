@@ -300,6 +300,198 @@
                     />
                   </div>
                   
+                  <!-- Ausstattung Section -->
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-3">Ausstattung</label>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newProperty.features" 
+                          value="Balkon"
+                          class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span class="text-sm text-gray-700">Balkon</span>
+                      </label>
+                      
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newProperty.features" 
+                          value="Terrasse"
+                          class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span class="text-sm text-gray-700">Terrasse</span>
+                      </label>
+                      
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newProperty.features" 
+                          value="Einbauküche"
+                          class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span class="text-sm text-gray-700">Einbauküche</span>
+                      </label>
+                      
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newProperty.features" 
+                          value="Parkplatz"
+                          class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span class="text-sm text-gray-700">Parkplatz</span>
+                      </label>
+                      
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newProperty.features" 
+                          value="Tiefgarage"
+                          class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span class="text-sm text-gray-700">Tiefgarage</span>
+                      </label>
+                      
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newProperty.features" 
+                          value="Garten"
+                          class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span class="text-sm text-gray-700">Garten</span>
+                      </label>
+                      
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newProperty.features" 
+                          value="Aufzug"
+                          class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span class="text-sm text-gray-700">Aufzug</span>
+                      </label>
+                      
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newProperty.features" 
+                          value="Keller"
+                          class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span class="text-sm text-gray-700">Keller</span>
+                      </label>
+                      
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newProperty.features" 
+                          value="Fußbodenheizung"
+                          class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span class="text-sm text-gray-700">Fußbodenheizung</span>
+                      </label>
+                      
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newProperty.features" 
+                          value="Klimaanlage"
+                          class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span class="text-sm text-gray-700">Klimaanlage</span>
+                      </label>
+                      
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newProperty.features" 
+                          value="Kamin"
+                          class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span class="text-sm text-gray-700">Kamin</span>
+                      </label>
+                      
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newProperty.features" 
+                          value="Sauna"
+                          class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span class="text-sm text-gray-700">Sauna</span>
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <!-- Zusätzliche Details -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700 mb-2">Baujahr</label>
+                      <input 
+                        v-model="newProperty.details.yearBuilt" 
+                        type="text" 
+                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="z.B. 2018"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700 mb-2">Zustand</label>
+                      <select 
+                        v-model="newProperty.details.condition" 
+                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      >
+                        <option value="">Zustand wählen</option>
+                        <option value="Neubau">Neubau</option>
+                        <option value="Neuwertig">Neuwertig</option>
+                        <option value="Sehr gut">Sehr gut</option>
+                        <option value="Gut">Gut</option>
+                        <option value="Renoviert">Renoviert</option>
+                        <option value="Renovierungsbedürftig">Renovierungsbedürftig</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700 mb-2">Heizung</label>
+                      <select 
+                        v-model="newProperty.details.heating" 
+                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      >
+                        <option value="">Heizungsart wählen</option>
+                        <option value="Fußbodenheizung">Fußbodenheizung</option>
+                        <option value="Gasheizung">Gasheizung</option>
+                        <option value="Fernwärme">Fernwärme</option>
+                        <option value="Ölheizung">Ölheizung</option>
+                        <option value="Wärmepumpe">Wärmepumpe</option>
+                        <option value="Pelletheizung">Pelletheizung</option>
+                      </select>
+                    </div>
+                    
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700 mb-2">Energieklasse</label>
+                      <select 
+                        v-model="newProperty.details.energyClass" 
+                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      >
+                        <option value="">Energieklasse wählen</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="G">G</option>
+                        <option value="H">H</option>
+                      </select>
+                    </div>
+                  </div>
+                  
                   <button 
                     type="submit" 
                     :disabled="loading"
@@ -371,6 +563,21 @@
                         <p class="text-blue-600 font-medium">€{{ property.price }}</p>
                         <p class="text-gray-600 text-sm">{{ property.location }}</p>
                         <p class="text-gray-500 text-sm">{{ property.type }} • {{ property.size }}m² • {{ property.rooms }} Zimmer</p>
+                        <div v-if="property.features && property.features.length > 0" class="flex flex-wrap gap-1 mt-2">
+                          <span 
+                            v-for="feature in property.features.slice(0, 3)" 
+                            :key="feature"
+                            class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
+                          >
+                            {{ feature }}
+                          </span>
+                          <span 
+                            v-if="property.features.length > 3"
+                            class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full"
+                          >
+                            +{{ property.features.length - 3 }} weitere
+                          </span>
+                        </div>
                       </div>
                       <button 
                         @click="deleteProperty(property.id)" 
@@ -486,6 +693,102 @@
                     />
                   </div>
                   
+                  <!-- Highlights Section -->
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-3">Highlights</label>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newCompany.highlights" 
+                          value="Internationale Kunden"
+                          class="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                        />
+                        <span class="text-sm text-gray-700">Internationale Kunden</span>
+                      </label>
+                      
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newCompany.highlights" 
+                          value="Starkes Wachstum"
+                          class="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                        />
+                        <span class="text-sm text-gray-700">Starkes Wachstum</span>
+                      </label>
+                      
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newCompany.highlights" 
+                          value="Innovative Technologie"
+                          class="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                        />
+                        <span class="text-sm text-gray-700">Innovative Technologie</span>
+                      </label>
+                      
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newCompany.highlights" 
+                          value="Nachhaltige Ausrichtung"
+                          class="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                        />
+                        <span class="text-sm text-gray-700">Nachhaltige Ausrichtung</span>
+                      </label>
+                      
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newCompany.highlights" 
+                          value="Zertifizierte Qualität"
+                          class="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                        />
+                        <span class="text-sm text-gray-700">Zertifizierte Qualität</span>
+                      </label>
+                      
+                      <label class="flex items-center space-x-2 cursor-pointer">
+                        <input 
+                          type="checkbox" 
+                          v-model="newCompany.highlights" 
+                          value="Langjährige Erfahrung"
+                          class="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                        />
+                        <span class="text-sm text-gray-700">Langjährige Erfahrung</span>
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <!-- Zusätzliche Details -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700 mb-2">Website</label>
+                      <input 
+                        v-model="newCompany.details.website" 
+                        type="url" 
+                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="www.beispiel.de"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700 mb-2">Rechtsform</label>
+                      <select 
+                        v-model="newCompany.details.legalForm" 
+                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      >
+                        <option value="">Rechtsform wählen</option>
+                        <option value="GmbH">GmbH</option>
+                        <option value="AG">AG</option>
+                        <option value="KG">KG</option>
+                        <option value="GmbH & Co. KG">GmbH & Co. KG</option>
+                        <option value="UG">UG (haftungsbeschränkt)</option>
+                        <option value="OHG">OHG</option>
+                        <option value="Einzelunternehmen">Einzelunternehmen</option>
+                      </select>
+                    </div>
+                  </div>
+                  
                   <button 
                     type="submit" 
                     :disabled="loading"
@@ -557,6 +860,21 @@
                         <p class="text-green-600 font-medium">{{ company.industry }}</p>
                         <p class="text-gray-600 text-sm">{{ company.location }}</p>
                         <p class="text-gray-500 text-sm">{{ company.employees }} Mitarbeiter • Gegründet {{ company.founded }}</p>
+                        <div v-if="company.highlights && company.highlights.length > 0" class="flex flex-wrap gap-1 mt-2">
+                          <span 
+                            v-for="highlight in company.highlights.slice(0, 2)" 
+                            :key="highlight"
+                            class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                          >
+                            {{ highlight }}
+                          </span>
+                          <span 
+                            v-if="company.highlights.length > 2"
+                            class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full"
+                          >
+                            +{{ company.highlights.length - 2 }} weitere
+                          </span>
+                        </div>
                       </div>
                       <button 
                         @click="deleteCompany(company.id)" 
@@ -618,7 +936,12 @@ const newProperty = ref({
     email: 'info@immobilienmakler.de',
     phone: '+49 89 123 456'
   },
-  details: {}
+  details: {
+    yearBuilt: '',
+    condition: '',
+    heating: '',
+    energyClass: ''
+  }
 })
 
 // Companies data
@@ -636,6 +959,10 @@ const newCompany = ref({
   contact: {
     email: 'info@immobilienmakler.de',
     phone: '+49 89 123 456'
+  },
+  details: {
+    website: '',
+    legalForm: ''
   }
 })
 
@@ -715,7 +1042,12 @@ async function addProperty() {
         email: 'info@immobilienmakler.de',
         phone: '+49 89 123 456'
       },
-      details: {}
+      details: {
+        yearBuilt: '',
+        condition: '',
+        heating: '',
+        energyClass: ''
+      }
     }
     
     // Show success message
@@ -785,6 +1117,10 @@ async function addCompany() {
       contact: {
         email: 'info@immobilienmakler.de',
         phone: '+49 89 123 456'
+      },
+      details: {
+        website: '',
+        legalForm: ''
       }
     }
     
